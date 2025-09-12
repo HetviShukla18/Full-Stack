@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Form - Income Result</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Income Calculation Result</h1>
+            <p>Your total income has been calculated on the server</p>
+        </header>
+        
+        <main>
+            <div class="result-card">
+                <h2>Income Breakdown</h2>
+                
+                <div class="result-item">
+                    <span class="label">Income Source 1:</span>
+                    <span class="value">$<%= income1 %></span>
+                </div>
+                
+                <div class="result-item">
+                    <span class="label">Income Source 2:</span>
+                    <span class="value">$<%= income2 %></span>
+                </div>
+                
+                <div class="result-divider"></div>
+                
+                <div class="result-item total">
+                    <span class="label">Total Income:</span>
+                    <span class="value">$<%= totalIncome %></span>
+                </div>
+            </div>
+            
+            <div class="actions">
+                <a href="/" class="btn btn-primary">Calculate Another</a>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 Tax Form Calculator. All calculations are performed on the server.</p>
+        </footer>
+    </div>
+</body>
+</html>

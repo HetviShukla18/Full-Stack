@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Form - Income Calculator</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tax Form Calculator</h1>
+            <p>Enter your income from two sources to calculate the total</p>
+        </header>
+        
+        <main>
+            <form action="/calculate" method="POST" class="tax-form">
+                <% if (error) { %>
+                    <div class="error-message">
+                        <%= error %>
+                    </div>
+                <% } %>
+                
+                <div class="form-group">
+                    <label for="income1">Income Source 1 ($)</label>
+                    <input 
+                        type="number" 
+                        id="income1" 
+                        name="income1" 
+                        step="0.01" 
+                        min="0" 
+                        placeholder="Enter income from first source"
+                        value="<%= income1 %>"
+                        required
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="income2">Income Source 2 ($)</label>
+                    <input 
+                        type="number" 
+                        id="income2" 
+                        name="income2" 
+                        step="0.01" 
+                        min="0" 
+                        placeholder="Enter income from second source"
+                        value="<%= income2 %>"
+                        required
+                    >
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Calculate Total Income</button>
+                    <button type="reset" class="btn btn-secondary">Clear Form</button>
+                </div>
+            </form>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 Tax Form Calculator. All calculations are performed on the server.</p>
+        </footer>
+    </div>
+</body>
+</html>

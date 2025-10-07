@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Rep Counter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💪 Gym Rep Counter</h1>
+        </header>
+        
+        <main class="counter-section">
+            <div class="exercise-selector">
+                <label for="exercise">Current Exercise:</label>
+                <select id="exercise">
+                    <option value="push-ups">Push-ups</option>
+                    <option value="squats">Squats</option>
+                    <option value="sit-ups">Sit-ups</option>
+                    <option value="pull-ups">Pull-ups</option>
+                    <option value="burpees">Burpees</option>
+                    <option value="custom">Custom Exercise</option>
+                </select>
+                <input type="text" id="customExercise" placeholder="Enter exercise name" style="display: none;">
+            </div>
+
+            <div class="counter-display">
+                <div class="count-wrapper">
+                    <span class="count-label">Reps</span>
+                    <div class="count" id="count">0</div>
+                </div>
+            </div>
+
+            <div class="button-controls">
+                <button class="btn btn-decrease" id="decreaseBtn">-1</button>
+                <button class="btn btn-increase" id="increaseBtn">+1</button>
+            </div>
+
+            <div class="additional-controls">
+                <button class="btn btn-reset" id="resetBtn">Reset</button>
+                <button class="btn btn-add-set" id="addSetBtn">Complete Set</button>
+            </div>
+
+            <div class="sets-history" id="setsHistory">
+                <h3>Sets Completed</h3>
+                <div class="sets-list" id="setsList"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
